@@ -649,7 +649,7 @@ h3::after {
 
 /*ширина контента*/
 .works{
-  min-height: 500px;
+  
 }
 .work_boxs {
   display: flex;
@@ -659,22 +659,22 @@ h3::after {
   padding: 0 10px;
   margin: 0 auto;
 }
-.cotainer{
-  display: flex;
+.container{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
 }
 .work_box {
   display: flex;
-  flex-wrap: wrap;
-}
+
+  }
 
 
 /* блок с картинками */
 .box-img {
-  flex-shrink: 1;
-  max-width: 300px;
-  max-height: 200px;
-  height: 100%;
-  width: 100%;
+  
+  width: 300px;
+  height: 200px;
   margin: 0 auto;
 
   background-color: #3333;
@@ -695,10 +695,12 @@ h3::after {
 
 /* рамка */
 .box-content {
+  display: flex;
+  flex-direction: column;
   width: 345px;
   outline: 3px solid #b59f5b;
   padding:  0 25px;
-  margin-bottom: 65px;
+  
 }
 /* текст */
 .box-label {
