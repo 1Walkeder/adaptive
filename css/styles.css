@@ -192,7 +192,7 @@ body {
 }
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 4;
 }
 .header::after {
   content: "";
@@ -660,19 +660,19 @@ h3::after {
   margin: 0 auto;
 }
 .container{
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
+ 
 }
 .work_box {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
-  }
+}
 
 
 /* блок с картинками */
 .box-img {
-  
+ 
   width: 300px;
   height: 200px;
   margin: 0 auto;
@@ -697,6 +697,7 @@ h3::after {
 .box-content {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
   width: 345px;
   outline: 3px solid #b59f5b;
   padding:  0 25px;
@@ -822,3 +823,153 @@ h3::after {
   text-align: center;
   margin-bottom: 40px;
 }
+
+//-----------POPUP----------------------
+.popup {
+
+}
+.popup__body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.popup__info {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup__close {
+  background-image: url('../svg/form-x.svg');
+  background-color: black;
+  width: 10px;
+  position: absolute;
+}
+.popup__content {
+  padding: 50px 30px;
+  width: 390px;
+  height: 590px;
+  background-color: #fff;
+}
+.popup-text {
+  font-size: 13px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+//----------Выпадающий список----------------------
+.question__popup {}
+.popup-text {}
+.qustion-visit {
+ 
+}
+.popup-values-selection {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  width: 330px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color:  #f4f7f6;
+  padding-left: 20px;
+  
+  font-size: 13px;
+  color: #747676;
+
+  background-image: url("../svg/form-arrows.svg");
+  background-size: 3% ;
+  background-repeat: no-repeat;
+  background-position:  right 15px center;
+}
+
+
+
+
+//----------POPUP----------------------
+
+.radiobutton__popup__wrp {
+
+}
+.radiobutton__popup__label {
+  cursor: pointer;
+}
+.radiobutton__popup__input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+.radiobutton__popup__text {
+  font-size: 13px;
+  margin-right: 16px;
+}
+.radiobutton__popup__text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  background-image: url('../svg/form-empty-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+.radiobutton__popup__input:checked ~ .radiobutton__popup__text::before {
+  background-image: url('../svg/form-circle.svg');
+}
+
+////////////////////////////////////////////////////////
+
+
+.popup-values-selection {
+
+}
+
+.input-popup {
+  box-sizing:  border-box;
+  width: 100%;
+  height: 130px;
+  background-color: #f4f7f6;
+  outline: none;
+  border: none;
+}
+.input-popup:focus, .popup-values-selection:focus {
+  outline: 1px solid #b59f5b;
+}
+.input-popup::placeholder {
+  font-family: inherit;
+  padding: 0 20px 0 20px;
+}
+
+.send {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: #b59f5b;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.send:hover {
+  background-color: #323232;
+}
+

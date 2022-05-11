@@ -456,9 +456,10 @@
          
             <div class="work_wrap">
               <div class="work_boxs">
-                <div class='container'>
-                <div class="box-img one"></div>
+                
+                
                 <div class="work_box">
+                  <div class="box-img one"></div>
                   <div class="box-content">
                     <div class="box-label">Подушки на диван</div>
                     <div class="box-text">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="text-link">здесь</a>.</div>
@@ -471,11 +472,9 @@
                   </div>
                   </div>
                 </div>
-                </div>
-
-                <div class="container">
-                <div class="box-img two"></div>
+                
                   <div class="work_box">
+                    <div class="box-img two"></div>
                     <div class="box-content">
                     <div class="box-label">Кукла «Зайчик»</div>
                   <div class="box-text">
@@ -490,11 +489,9 @@
                   </div>
                 </div>
               </div>
-              </div>
-
-                <div class="container">
-                <div class="box-img three"></div>
+             
                   <div class="work_box">
+                    <div class="box-img three"></div>
                     <div class="box-content">
                     <div class="box-label">Шестиугольная рамка</div>
                   <div class="box-text">
@@ -509,7 +506,7 @@
                   <button class="in-shop" type="button">В магазин</button>
                   </div>
                 </div>
-                </div>
+                
 
               </div>
             
@@ -559,6 +556,53 @@
         </div>
       </div>
     </footer>
+  
+ 
+  <!-- POPUP-->
+  <div class='popup'>
+    <div class="popup__body">
+      <div class="popup__info">
+        <a href="" class="popup__close"></a>
+        <div class="popup__content">
+          <h1>Ваш фидбек</h1>
+          <form action="" class="question__popup">
+            <label for="visit" class="qustion-visit">
+              <p class="popup-text">Как часто вы заходите на сайт?</p>
+              <select name="select" id="visit" class="popup-values-selection">
+                <option value="value1" class="" selected>Почти каждый день</option>
+                <option value="value2" class="">Раз в несколько дней</option>
+                <option value="value3" class="">Раз в несколько недель</option>
+                <option value="value4" class="">Несколько раз в год</option>
+              </select>
+            </label>
+          </form>
+
+          <form action="" class="radiobutton__popup">
+            <p class="popup-text">Вы подписаны на e-mail рассылку?</p>
+            <div class="radiobutton__popup__wrp">
+              <label for="choseYes" class="radiobutton__popup__label">
+                <input type="radio" id="choseYes" class="radiobutton__popup__input" checked name="choice">
+                <span class="radiobutton__popup__text">Да</span>
+              </label>
+              <label for="choseNo" class="radiobutton__popup__label">
+                <input type="radio" id="choseNo" class="radiobutton__popup__input" name="choice">
+                <span class="radiobutton__popup__text">Нет</span>
+              </label>
+            </div>
+          </form>
+          
+          <form action="" class="advice__popup">
+              <p class="popup-text input">Рассскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
+              <label for="advice" class=""></label>
+              <input type="text" class="input-popup" placeholder="Может, больше рецептов?">
+          </form>
+          <form action="">
+            <button class="send"> отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 </html>
