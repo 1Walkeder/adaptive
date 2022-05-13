@@ -30,6 +30,21 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
+  position: relative;
+  z-index: 1;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.6;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
 }
   
   .menu>ul {
@@ -38,7 +53,6 @@ html {
 
              /* tabletБургер */
 .menu_button {
-
   width: 23px;
   height: 20px;  
   border: none;
@@ -62,7 +76,6 @@ html {
 }
         /*tablet: Заглавный текст первого блока*/
 .info {
-
   justify-items: center;
   align-items: center;
   
@@ -104,6 +117,8 @@ html {
 .info-block {
   display: flex;
   flex-wrap: wrap;
+  width: 390px;
+
 }
 .text-info-block:after {
   content: "";
@@ -114,23 +129,24 @@ html {
   width: 100%;
   border-bottom: 3px solid #eeeeee;
   }
+
+          /*Блок "Наши изделия"*/
+.work_boxs {
+  width: 770px;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
-
-
-
-
-
-
-
+.work_box {
+  margin-bottom: 30px;
+}
+}
 
 
 
                 /*mobile*/
 @media (max-width: 640px) {
  
-  .menu_button {
+  .header {
     background-image: url("../images/banner-mobile.jpg");
   }
 }
