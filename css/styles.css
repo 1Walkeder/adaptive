@@ -22,8 +22,8 @@ html {
 }
 
 
-              /*tablet ver*/
-@media (min-width:641px) and (max-width: 1199px) {
+              /*tablet */
+@media (min-width:641px) and (max-width: 1200px) {
   .header {
   background-image: url("../images/banner-bg-tablet.jpg");
   background-color: #434347;
@@ -36,7 +36,7 @@ html {
     display: none;
   }
 
-             /* Бургер */
+             /* tabletБургер */
 .menu_button {
 
   width: 23px;
@@ -54,13 +54,13 @@ html {
   max-width: 700px;
   margin: 0 auto;
 }
-          /*меню*/
+          /*tablet: меню*/
 .top-menu {
   max-width: 700px;
   margin: 0 auto;
   padding-top: 50px;
 }
-        /*Заглавный текст первого блока*/
+        /*tablet: Заглавный текст первого блока*/
 .info {
 
   justify-items: center;
@@ -72,8 +72,10 @@ html {
   line-height: calc(75 / 45);
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 125px;
 }
-        /*Блок с трендами*/
+
+        /*tablet: Блок с трендами*/
 .trends-box {
   display: flex;
   flex-wrap: wrap;
@@ -82,29 +84,26 @@ html {
   max-width: 770px;
   width: 100%;
 }
-        /*Боксы трендов*/
 .trend-box {
-  width: 49.72%;
-}
-.trend-box:nth-child(-n+2) {
+  max-width: 383px;
   margin-bottom: 4px;
 }
-.trend-box:nth-child(2n+2) {
-  margin-left:  4px;
-}
-        /*Основная часть*/
+
+        /*tablet: Основная часть*/
 .super-news {
-  max-width: 770px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 35px;
-}
-.info-block {
-  flex-wrap: wrap;
+  width: 770px;
   
 }
-.text-info-block {
-  width: 100 vw;
+.main {
+  width: 425px;
+}
+.asides {
+  width: 270px;
+}
+.info-block {
+  display: flex;
+  flex-wrap: wrap;
 }
 .text-info-block:after {
   content: "";
@@ -114,16 +113,25 @@ html {
   margin-top: 15px;
   width: 100%;
   border-bottom: 3px solid #eeeeee;
-}}
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
                 /*mobile*/
 @media (max-width: 640px) {
-  .menu>ul {
-    display: none;
-  }
+ 
   .menu_button {
-    background-image: ;
+    background-image: url("../images/banner-mobile.jpg");
   }
 }
 
@@ -758,7 +766,7 @@ h3::after {
 }
 
 
-                            /*Нижняя часть сайта*/
+/*Нижняя часть сайта*/
 .footer {
 }
 .address {
@@ -824,9 +832,33 @@ h3::after {
   margin-bottom: 40px;
 }
 
-//-----------POPUP----------------------
-.popup {
+/*-------------POPUP----------------------*/
+.popup-call-wrp{
+  position: relative;
+  z-index: 50;
+}
 
+.your_feedback {
+  position: fixed;
+  z-index: 50;
+  bottom: 10px;
+  left: 10px;
+
+  background-color: #b59f5b;
+  border-radius: 10%;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 20px 5px;
+  font-weight: bold;
+  color: #333333;
+
+}
+.your_feedback:hover {
+  color: #b0b0b0;
+}
+.your_feedback:target {
+  opacity: 0;
+  visibility: hidden;
 }
 .popup__body {
   position: fixed;
@@ -836,6 +868,12 @@ h3::after {
   top: 0;
   left: 0;
   z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup__body:target {
+  opacity: 1;
+  visibility: visible;
 }
 .popup__info {
   min-height: 100%;
@@ -844,12 +882,15 @@ h3::after {
   justify-content: center;
 }
 .popup__close {
-  background-image: url('../svg/form-x.svg');
-  background-color: black;
-  width: 10px;
   position: absolute;
+  background-image: url('../svg/form-x.svg');
+  width: 20px;
+  height: 20px;
+  top: -25px;
+  left: 370px;
 }
 .popup__content {
+  position: relative;
   padding: 50px 30px;
   width: 390px;
   height: 590px;
@@ -862,7 +903,7 @@ h3::after {
   color: #333333;
 }
 
-//----------Выпадающий список----------------------
+/*----------Выпадающий список----------------------*/
 .question__popup {}
 .popup-text {}
 .qustion-visit {
@@ -896,11 +937,9 @@ h3::after {
 
 
 
-//----------POPUP----------------------
+/*----------radiobutton----------------------
+*/
 
-.radiobutton__popup__wrp {
-
-}
 .radiobutton__popup__label {
   cursor: pointer;
 }
@@ -932,28 +971,24 @@ h3::after {
   background-image: url('../svg/form-circle.svg');
 }
 
-////////////////////////////////////////////////////////
-
-
-.popup-values-selection {
-
-}
-
+/*--------------Поле для ввода текста-------------*/
 .input-popup {
-  box-sizing:  border-box;
+  padding: 20px;
   width: 100%;
   height: 130px;
   background-color: #f4f7f6;
   outline: none;
   border: none;
+  font-family: inherit;
+}
+.input-popup:placeholder {
+  color: #747676;
 }
 .input-popup:focus, .popup-values-selection:focus {
   outline: 1px solid #b59f5b;
 }
-.input-popup::placeholder {
-  font-family: inherit;
-  padding: 0 20px 0 20px;
-}
+
+
 
 .send {
   width: 100%;
@@ -968,6 +1003,7 @@ h3::after {
   color: #ffffff;
   cursor: pointer;
   margin-top: 25px;
+s
 }
 .send:hover {
   background-color: #323232;

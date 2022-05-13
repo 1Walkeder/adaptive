@@ -8,6 +8,10 @@
 </head>
 <body>
   <div class="wrapper">
+  </div>
+    <div class="popup-call-wrp">
+      <a href="#popup" class="your_feedback">Popup</a>
+    </div>
     <header class="header">
       <div class="header-item">
         <div class="header-content">
@@ -45,7 +49,7 @@
         </div>
       </div>
     </header>
-
+                  <!-- блок "сейчас в тренде" -->
     <section class="trends">
       <div class="trend-content">
         <h1 class="trends-text">Сейчас в тренде</h1>
@@ -104,7 +108,7 @@
      	</div>
       </div>
     </section>
-
+<!-- основная часть -->
     <div class="super-news">
       <main class="main">
         <div class="info-blocks">
@@ -521,31 +525,31 @@
           <li class="social-address">
             <a href="#" class="icon twiter">
               <span class="icon-text">twiter</span>
-              <p class="icon-visually-hidden">бюджетный twitter</p>
+              <p class="icon-visually-hidden">twitter</p>
             </a>
           </li>
           <li class="social-address">
             <a href="#" class="icon pinterest">
               <span class="icon-text">pinterest</span>
-              <p class="icon-visually-hidden">бюджетный pinterest</p>
+              <p class="icon-visually-hidden">pinterest</p>
             </a>
           </li>
           <li class="social-address">
             <a href="#" class="icon facebook">
               <span class="icon-text">facebook</span>
-              <p class="icon-visually-hidden">бюджетный facebook</p>
+              <p class="icon-visually-hidden">facebook</p>
             </a>
           </li>
           <li class="social-address">
             <a href="#" class="icon instagram">
               <span class="icon-text">instagram</span>
-              <p class="icon-visually-hidden">бюджетный instagram</p>
+              <p class="icon-visually-hidden">instagram</p>
             </a>
           </li>
           <li class="social-address">
             <a href="#" class="icon tumblr">
               <span class="icon-text">tumblr</span>
-              <p class="icon-visually-hidden">бюджетный tumblr</p>
+              <p class="icon-visually-hidden">tumblr</p>
             </a>
           </li>
         </ul>
@@ -559,11 +563,12 @@
   
  
   <!-- POPUP-->
-  <div class='popup'>
-    <div class="popup__body">
+  <div class='popup' >
+    <div class="popup__body"id="popup">
       <div class="popup__info">
-        <a href="" class="popup__close"></a>
+       
         <div class="popup__content">
+          <a href="#" class="popup__close"></a>
           <h1>Ваш фидбек</h1>
           <form action="" class="question__popup">
             <label for="visit" class="qustion-visit">
@@ -594,7 +599,7 @@
           <form action="" class="advice__popup">
               <p class="popup-text input">Рассскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
               <label for="advice" class=""></label>
-              <input type="text" class="input-popup" placeholder="Может, больше рецептов?">
+              <textarea type="text" class="input-popup" placeholder="Может, больше рецептов?"></textarea> 
           </form>
           <form action="">
             <button class="send"> отправить</button>
@@ -602,7 +607,8 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
+
+
+ 
 </body>
 </html>
